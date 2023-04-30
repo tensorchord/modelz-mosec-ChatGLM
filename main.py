@@ -12,12 +12,12 @@ class ChatGLM(Worker):
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained(
             "THUDM/chatglm-6b", trust_remote_code=True)
-        self.model = AutoModel.from_pretrained(
+        model = AutoModel.from_pretrained(
             "THUDM/chatglm-6b", trust_remote_code=True).half().cuda()
         self.model = model.eval()
 
     def forward(self, data):
-        response = model.chat(tokenizer, data, history=[])
+        response = self.model.chat(self.tokenizer, data, history=[])
         return response
 
 
