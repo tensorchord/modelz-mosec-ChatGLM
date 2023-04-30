@@ -1,7 +1,5 @@
-from io import BytesIO
 from typing import List
 
-import torch  # type: ignore
 from transformers import AutoTokenizer, AutoModel  # type: ignore
 
 from mosec import Server, Worker, get_logger
