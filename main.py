@@ -17,8 +17,10 @@ class ChatGLM(Worker):
         self.model = model.eval()
 
     def forward(self, data):
-        response = self.model.chat(self.tokenizer, data, history=[])
-        return response
+        res = []
+        for req in data:
+            res.append(self.model.chat(self.tokenizer, req, history=[]))
+        return res
 
 
 if __name__ == "__main__":
