@@ -1,4 +1,4 @@
-# Modelz Stable Diffusion Template
+# Modelz Mosec ChatGLM
 
 ## Build Docker Image
 
