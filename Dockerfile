@@ -69,4 +69,4 @@ WORKDIR workspace
 # ENV HF_HUB_OFFLINE=true
 
 ENTRYPOINT [ "python", "main.py" ]
-CMD [ "--timeout", "20000" ]
+CMD [ "--timeout", "60000" ]
